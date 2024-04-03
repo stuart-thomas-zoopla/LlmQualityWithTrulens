@@ -10,7 +10,7 @@ correctness = Feedback(provider.correctness_with_cot_reasons).on_output()
 harmfulness = Feedback(provider.harmfulness_with_cot_reasons, higher_is_better=False).on_output()
 controversy = Feedback(provider.controversiality_with_cot_reasons, higher_is_better=False).on_output()
 
-tru.reset_database() #uncomment to reset database if it becomes corrupt
+#tru.reset_database() #uncomment to reset database if it becomes corrupt
 
 def llm_standalone(prompt):
     response = completion(
